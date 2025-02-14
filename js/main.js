@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const totalLetras = letras.length;
 
     function posicionarLetras() {
-        const esPantallaPequena = window.innerWidth < 540;
+        const esPantallaPequena = window.innerWidth < 600;
         const radio = esPantallaPequena ? 150 : 230; // Ajusta el radio según el tamaño de la pantalla
 
         letras.forEach((letra, index) => {
