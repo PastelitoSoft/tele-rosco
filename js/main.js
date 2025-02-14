@@ -77,6 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+setTimeout(posicionarLetras, 50);
+
 
 
 
