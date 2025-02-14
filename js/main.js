@@ -74,13 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Escuchar cambios en el tamaño de la pantalla
     window.addEventListener("resize", posicionarLetras);
 
-
 });
-
-setTimeout(posicionarLetras, 50);
-
-
-
 
 rueda.addEventListener("click", function () {
     if (abecedario.length === 0) {
@@ -128,8 +122,6 @@ rueda.addEventListener("click", function () {
 
     });
 });
-
-
 
 
 closeButton.addEventListener("click", function () {

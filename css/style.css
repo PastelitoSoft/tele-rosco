@@ -525,6 +525,11 @@ body {
 
     body {
         overflow: hidden;
+
+    }
+
+    .escenario {
+        display: none;
     }
 
 
