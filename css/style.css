@@ -407,7 +407,136 @@ body {
     }
 }
 
-@media (max-width: 600px) and (orientation: portrait) {
+@media (max-width: 650px) {
+
+    .row {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+
+    }
+
+
+    .conductor {
+        display: none;
+    }
+
+    .flufi {
+        display: flex;
+        max-width: 100px;
+    }
+
+    .footer-capa2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .letra-modal {
+        font-size: 2.5rem;
+        font-weight: bold;
+
+    }
+
+    .texto-modal {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+        padding: 0.5rem;
+    }
+
+
+    /* Rosco */
+    .rosco-contenedor {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+
+    }
+
+    .rosco-rueda {
+        width: 260px;
+        height: 260px;
+        position: absolute;
+        background-color: #3357ff;
+        border-radius: 50%;
+        z-index: 200;
+    }
+
+    .rosco {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+    }
+
+    /* Letras */
+    .letra {
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        color: black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        font-size: 1rem;
+        font-weight: bold;
+        transform-origin: center;
+    }
+
+    .rosco-fondo {
+        width: 360px;
+    }
+
+    .resaltar {
+        width: 35px;
+        height: 35px;
+        background-color: #d267db;
+        color: white;
+        font-size: 1.3rem;
+        transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+        transform: scale(1);
+    }
+
+    @keyframes resaltar-animacion {
+        0% {
+            transform: scale(1);
+            background-color: white;
+        }
+
+        100% {
+            transform: scale(1.2);
+            background-color: #d267db;
+        }
+    }
+
+    body {
+        overflow: hidden;
+
+    }
+
+    .escenario {
+        display: none;
+    }
+
+
+
+}
+
+@media (orientation: portrait) {
 
     .row {
         width: 100%;
