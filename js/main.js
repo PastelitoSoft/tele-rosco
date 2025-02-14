@@ -68,7 +68,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     posicionarLetras(); // Ejecutar al cargar
 
+    // Reforzar el posicionamiento después de un pequeño retraso
+    setTimeout(posicionarLetras, 50);
+
+    // Escuchar cambios en el tamaño de la pantalla
+    window.addEventListener("resize", posicionarLetras);
+
+
 });
+
+
+
 
 rueda.addEventListener("click", function () {
     if (abecedario.length === 0) {
