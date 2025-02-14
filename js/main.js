@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function posicionarLetras() {
         const esPantallaPequena = window.innerWidth < 540;
-        const radio = esPantallaPequena ? 160 : 230; // Ajusta el radio según el tamaño de la pantalla
+        const radio = esPantallaPequena ? 150 : 230; // Ajusta el radio según el tamaño de la pantalla
 
         letras.forEach((letra, index) => {
             const angulo = (index / totalLetras) * 360; // Divide el círculo en partes iguales
