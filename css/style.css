@@ -1,0 +1,518 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+/* Estilos generales */
+body,
+html {
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+/* Contenedor principal */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+
+}
+
+
+/* Filas */
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+
+}
+
+/* Estilos específicos para cada fila */
+.header {
+    height: 2%;
+
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 96%;
+    /* padding-top: 1rem;*/
+    width: 100%;
+    max-width: 1100px;
+
+}
+
+.footer {
+    position: relative;
+    height: 2%;
+    width: 100%;
+    max-width: 1100px;
+
+    /* Permite que la imagen sobresalga */
+}
+
+/* Rosco */
+.rosco-contenedor {
+    width: 550px;
+    height: 550px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+
+.rosco-rueda {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    background-color: #3357ff;
+    border-radius: 50%;
+    z-index: 200;
+    cursor: pointer;
+}
+
+.rosco {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Letras */
+.letra {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transform-origin: center;
+}
+
+/* Modal flotante */
+.modal {
+    display: none;
+    /* Inicialmente oculto */
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 800px;
+    /* 600px de ancho */
+    height: 60%;
+    /* 50% de alto */
+
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: black;
+    z-index: 1000;
+    opacity: 0;
+    background-color: white;
+    /* Inicia invisible */
+    animation: modal-appear 0.6s ease-out forwards;
+    /* Animaciones */
+}
+
+.fondo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 0;
+}
+
+
+
+.blur {
+    filter: blur(8px);
+    transition: filter 0.3s ease-in-out;
+}
+
+@keyframes modal-appear {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1);
+        /* Rebote: aumento de tamaño */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        /* Vuelve al tamaño original */
+    }
+}
+
+@keyframes modal-disappear {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
+
+
+
+
+/* Asegura que el botón esté en la parte inferior del modal */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Distribuir los elementos */
+    height: 100%;
+    /* Aprovecha toda la altura del modal */
+    text-align: center;
+}
+
+#close-button {
+    margin-top: auto;
+    /* Hace que el botón quede en la parte inferior */
+    padding: 10px;
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#close-button:hover {
+    background-color: #ff4500;
+}
+
+/* Define la animación de giro */
+@keyframes giro-rueda {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(1440deg);
+        /* 4 giros completos */
+    }
+}
+
+/* Clase para aplicar el giro */
+.rosco-rueda.girar {
+    animation: giro-rueda 4s ease-out forwards;
+    /* 3 segundos de duración y desaceleración */
+}
+
+.letra-modal {
+    font-size: 4rem;
+    font-weight: bold;
+
+}
+
+.texto-modal {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+.resaltar {
+    width: 54px;
+    height: 54px;
+    background-color: #d267db;
+    color: white;
+    font-size: 1.3rem;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    transform: scale(1);
+}
+
+@keyframes resaltar-animacion {
+    0% {
+        transform: scale(1);
+        background-color: white;
+    }
+
+    100% {
+        transform: scale(1.2);
+        background-color: #d267db;
+    }
+}
+
+.escenario {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+}
+
+.conductor {
+    max-width: 290px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    pointer-events: none;
+}
+
+.footer-capa1 {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: 0;
+    z-index: 1800;
+}
+
+.footer-capa2 {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    z-index: 2000;
+}
+
+.footer-capa3 {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: 0;
+    z-index: 2000;
+}
+
+
+.flufi {
+    max-width: 120px;
+
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    object-fit: contain;
+    pointer-events: none;
+
+}
+
+@media (min-width: 1400px) {
+    .conductor {
+        max-width: 350px;
+    }
+
+    .flufi {
+        max-width: 130px;
+    }
+}
+
+@media (max-width: 800px) {
+    .conductor {
+        max-width: 200px;
+    }
+
+    .flufi {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    .conductor {
+        max-width: 180px;
+    }
+
+    .flufi {
+        max-width: 80px;
+    }
+
+    .letra-modal {
+        font-size: 3rem;
+        font-weight: bold;
+
+    }
+
+    .texto-modal {
+        font-size: 1.5rem;
+
+        margin-top: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .conductor {
+        display: none;
+    }
+
+    .flufi {
+        display: none;
+    }
+
+    .letra-modal {
+        font-size: 2.5rem;
+        font-weight: bold;
+
+    }
+
+    .texto-modal {
+        font-size: 1.3rem;
+
+        margin-top: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 540px) {
+
+    .row {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+
+    }
+
+
+    .conductor {
+        display: none;
+    }
+
+    .flufi {
+        display: flex;
+        max-width: 100px;
+    }
+
+    .footer-capa2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .letra-modal {
+        font-size: 2.5rem;
+        font-weight: bold;
+
+    }
+
+    .texto-modal {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+        padding: 0.5rem;
+    }
+
+
+    /* Rosco */
+    .rosco-contenedor {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+
+    }
+
+    .rosco-rueda {
+        width: 280px;
+        height: 280px;
+        position: absolute;
+        background-color: #3357ff;
+        border-radius: 50%;
+        z-index: 200;
+    }
+
+    .rosco {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+    }
+
+    /* Letras */
+    .letra {
+        width: 35px;
+        height: 35px;
+        background-color: white;
+        color: black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        font-size: 1rem;
+        font-weight: bold;
+        transform-origin: center;
+    }
+
+    .rosco-fondo {
+        width: 380px;
+    }
+
+    .resaltar {
+        width: 40px;
+        height: 40px;
+        background-color: #d267db;
+        color: white;
+        font-size: 1.3rem;
+        transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+        transform: scale(1);
+    }
+
+    @keyframes resaltar-animacion {
+        0% {
+            transform: scale(1);
+            background-color: white;
+        }
+
+        100% {
+            transform: scale(1.2);
+            background-color: #d267db;
+        }
+    }
+
+
+
+}

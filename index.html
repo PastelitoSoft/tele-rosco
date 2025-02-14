@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidad con IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Diseño responsivo -->
+
+
+    <!-- SEO Básico -->
+    <title>Rosco sin rosca</title>
+    <meta name="description" content="Descripción breve del sitio, preferiblemente menos de 160 caracteres.">
+    <meta name="keywords" content="palabras clave, relacionadas, con el contenido">
+    <meta name="author" content="Tu Nombre o Compañía">
+
+    <!-- Redes Sociales / Compartir en Open Graph -->
+    <!-- <meta property="og:title" content="Título del Proyecto">
+    <meta property="og:description" content="Descripción para redes sociales, breve y atractiva.">
+    <meta property="og:image" content="URL de la imagen que se usará en la previsualización.">
+    <meta property="og:url" content="URL del proyecto">
+    <meta property="og:type" content="website">
+
+     Twitter Cards 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Título del Proyecto">
+    <meta name="twitter:description" content="Descripción breve para Twitter">
+    <meta name="twitter:image" content="URL de la imagen para Twitter">-->
+
+    <!-- Favicon -->
+    <link rel="icon" href="/res/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/res/img/favicon.ico"> <!-- Icono para dispositivos Apple -->
+
+    <!-- Archivos CSS -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Manifiesto -->
+    <!--<link rel="manifest" href="/manifest.json">-->
+    <!-- Fuentes externas o Frameworks -->
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">-->
+    <!-- Fuente de Google  https://github.com/PastelitoSoft/tele-rosco.git-->
+</head>
+
+<body>
+
+    <img id="fondo" src="./res/img/fondo.png" alt="" class="fondo">
+
+    <div id="contenedor" class="container-fluid contenedor g-0">
+        <div class="row header g-0"></div>
+        <div class="row content g-0">
+
+
+
+            <div class="rosco-contenedor">
+
+                <img id="rosco-rueda" src="./res/img/rueda_elipse.png" alt="" class="rosco-rueda">
+
+                <div class="rosco">
+
+                    <div class="letra H" id="H">H</div>
+                    <div class="letra I" id="I">I</div>
+                    <div class="letra J" id="J">J</div>
+                    <div class="letra K" id="K">K</div>
+                    <div class="letra L" id="L">L</div>
+                    <div class="letra M" id="M">M</div>
+                    <div class="letra N" id="N">N</div>
+                    <div class="letra Ñ" id="Ñ">Ñ</div>
+                    <div class="letra O" id="O">O</div>
+                    <div class="letra P" id="P">P</div>
+                    <div class="letra Q" id="Q">Q</div>
+                    <div class="letra R" id="R">R</div>
+                    <div class="letra S" id="S">S</div>
+                    <div class="letra T" id="T">T</div>
+                    <div class="letra U" id="U">U</div>
+                    <div class="letra V" id="V">V</div>
+                    <div class="letra W" id="W">W</div>
+                    <div class="letra X" id="X">X</div>
+                    <div class="letra Y" id="Y">Y</div>
+                    <div class="letra Z" id="Z">Z</div>
+                    <div class="letra A" id="A">A</div>
+                    <div class="letra B" id="B">B</div>
+                    <div class="letra C" id="C">C</div>
+                    <div class="letra D" id="D">D</div>
+                    <div class="letra E" id="E">E</div>
+                    <div class="letra F" id="F">F</div>
+                    <div class="letra G" id="G">G</div>
+
+
+                </div>
+
+                <img src="./res/img/rueda_fondo450.png" alt="" class="rosco-fondo">
+            </div>
+        </div>
+        <div class="row footer g-0">
+
+            <div class="footer-capa2">
+                <img src="./res/img/azul.png" alt="" class="flufi">
+                <img src="./res/img/rosa.png" alt="" class="flufi">
+                <img src="./res/img/amarillo.png" alt="" class="flufi">
+
+            </div>
+
+            <div class="footer-capa3">
+                <img src="./res/img/conductor.png" alt="" class="conductor">
+            </div>
+
+            <div class="footer-capa1">
+                <img src="./res/img/escenario3.png" alt="" class="escenario">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal flotante -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p id="letra-modal" class="letra-modal"></p>
+            <p id="texto-modal" class="texto-modal"></p>
+            <button id="close-button">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Sonidos -->
+    <audio id="sonido-ruleta" src="./res/sound/ruleta.mp3"></audio>
+    <audio id="tada" src="./res/sound/tada.mp3"></audio>
+
+
+
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/main.js" defer></script>
+</body>
+
+</html>
