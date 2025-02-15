@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 rueda.addEventListener("click", function () {
     if (abecedario.length === 0) {
         letraModal.innerText = "";
-        textoModal.innerText = "No quedan letras disponibles. Reinicia el juego.";
+        textoModal.innerText = "No quedan letras disponibles.\nReiniciá el juego.";
         contenedor.classList.add("blur");
         fondo.classList.add("blur");
         modal.style.display = "flex";
