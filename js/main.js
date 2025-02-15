@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const totalLetras = letras.length;
 
     function posicionarLetras() {
-        const esPantallaPequena = window.innerWidth < 600;
+        const esPantallaPequena = window.innerWidth < 660;
         const radio = esPantallaPequena ? 150 : 230; // Ajusta el radio según el tamaño de la pantalla
 
         letras.forEach((letra, index) => {
@@ -80,6 +80,9 @@ rueda.addEventListener("click", function () {
     if (abecedario.length === 0) {
         letraModal.innerText = "";
         textoModal.innerText = "No quedan letras disponibles. Reinicia el juego.";
+        contenedor.classList.add("blur");
+        fondo.classList.add("blur");
+        modal.style.display = "flex";
         closeButton.innerText = "Reiniciar";
         closeButton.addEventListener("click", () => location.reload());
         return;
