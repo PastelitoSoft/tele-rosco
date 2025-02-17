@@ -12,31 +12,31 @@ const tada = document.getElementById('tada');
 const abecedario = [
     { letra: "A", valor: "Palabras que acompañan el verbo y que indican cómo, cuándo o dónde se realiza una acción." },
     { letra: "B", valor: "Asiento largo que puede encontrarse en plazas. También es un establecimiento donde se realizan operaciones con dinero." },
-    { letra: "C", valor: "Signo de puntuación que se usa en la enumeración. También es una forma del verbo 'comer'." },
+    { letra: "C", valor: 'Signo de puntuación que se usa en la enumeración. También es una forma del verbo "comer".' },
     { letra: "D", valor: "Adverbio de tiempo que indica que algo sucederá más tarde." },
     { letra: "E", valor: "Adverbio de lugar que indica que algo está en una posición superior a otra cosa." },
-    { letra: "F", valor: "Adverbio de modo derivado de 'feliz'." },
-    { letra: "G", valor: "Felino doméstico. También es una herramienta para levantar objetos de mucho peso, como un auto." },
-    { letra: "H", valor: "Planta pequeña que crece en un terreno. Si se cambia una letra, se obtiene una de las formas del verbo 'hervir'." },
-    { letra: "I", valor: "Adverbio de modo derivado de 'igual'." },
-    { letra: "J", valor: "Lugar donde se cultivan plantas y flores. También es una etapa de la educación anterior a la primaria." },
-    { letra: "K", valor: "Fruta de cáscara marrón y pulpa verde. También es un ave no voladora, pequeña y con pico largo y filoso." },
+    { letra: "F", valor: 'Adverbio de modo derivado de "feliz".' },
+    { letra: "G", valor: 'Felino doméstico. También se le dice así a la herramienta que se usa para levantar objetos de mucho peso, como un auto.' },
+    { letra: "H", valor: 'Planta pequeña que crece en un terreno. Si se cambia una letra, se obtiene una de las formas del verbo "hervir".' },
+    { letra: "I", valor: 'Adverbio de modo derivado de "igual".' },
+    { letra: "J", valor: 'Lugar donde se cultivan plantas y flores. También es una etapa de la educación anterior a la primaria.' },
+    { letra: "K", valor: 'Fruta de cáscara marrón y pulpa verde. También es un ave no voladora, pequeña y con pico largo y filoso.' },
     { letra: "L", valor: "Clase de adverbios que indican dónde se realiza una acción." },
     { letra: "M", valor: "Clase de adverbios que indican cómo se realiza una acción." },
-    { letra: "N", valor: "Ninguna cosa. También es una forma del verbo 'nadar'." },
-    { letra: "Ñ", valor: "Contiene Ñ. Parte del día entre el amanecer y el mediodía. También es el día que sigue a hoy." },
-    { letra: "O", valor: "Onda que se forma en la superficie del mar. Si se agrega una H al inicio, se forma una palabra que se utiliza para saludar." },
-    { letra: "P", valor: "Máxima autoridad de la Iglesia católica. También es un tubérculo comestible, que puede ser blanco o negro." },
-    { letra: "Q", valor: "Contiene Q. Adverbio que indica que algo se realiza en este lugar." },
-    { letra: "R", valor: "Corriente natural de agua. También es una forma del verbo 'reír'." },
-    { letra: "S", valor: "Estrella central del sistema planetario en el que se encuentra la Tierra. También es una nota musical." },
+    { letra: "N", valor: 'Ninguna cosa. También es una forma del verbo "nadar".' },
+    { letra: "Ñ", valor: 'Contiene Ñ. Parte del día entre el amanecer y el mediodía. También es el día que sigue a hoy.' },
+    { letra: "O", valor: 'Onda que se forma en la superficie del mar. Si se agrega una H al inicio, se forma una palabra que se utiliza para saludar.' },
+    { letra: "P", valor: 'Máxima autoridad de la Iglesia católica. También es un tubérculo comestible, que puede ser blanco o negro.' },
+    { letra: "Q", valor: 'Contiene Q. Adverbio que indica que algo se realiza en este lugar.' },
+    { letra: "R", valor: 'Corriente natural de agua. También es una forma del verbo "reír".' },
+    { letra: "S", valor: 'Estrella central del sistema planetario en el que se encuentra la Tierra. También es una nota musical.' },
     { letra: "T", valor: "Clase de adverbios que indican cuándo se realiza una acción." },
-    { letra: "U", valor: "Adverbio de modo derivado de 'único'." },
-    { letra: "V", valor: "Elemento de cera que se usa para alumbrar. También es la pieza de lona que recibe el viento y ayuda a impulsar un barco o velero." },
+    { letra: "U", valor: 'Adverbio de modo derivado de "único".' },
+    { letra: "V", valor: 'Elemento de cera que se usa para alumbrar. También es la pieza de lona que recibe el viento y ayuda a impulsar un barco o velero.' },
     { letra: "W", valor: "Conexión inalámbrica para acceder a internet." },
-    { letra: "X", valor: "Contiene X. Adverbio de modo derivado de 'próximo'." },
-    { letra: "Y", valor: "Contiene Y. Adverbio de tiempo que refiere al día anterior a hoy." },
-    { letra: "Z", valor: "Contiene Z. Parte de la planta que está bajo tierra. También es la parte que se repite en las palabras de la misma familia." }
+    { letra: "X", valor: 'Contiene X. Adverbio de modo derivado de "próximo".' },
+    { letra: "Y", valor: 'Contiene Y. Adverbio de tiempo que refiere al día anterior a hoy.' },
+    { letra: "Z", valor: 'Contiene Z. Parte de la planta que está bajo tierra. También es la parte que se repite en las palabras de la misma familia.' }
 ];
 
 
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 rueda.addEventListener("click", function () {
-    if (abecedario.length === 0) {
+    if (abecedario.length == 0) {
         letraModal.innerText = "";
         textoModal.innerText = "No quedan letras disponibles.\nReiniciá el juego.";
         contenedor.classList.add("blur");

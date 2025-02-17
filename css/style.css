@@ -142,6 +142,14 @@ body {
 
 }
 
+.texto-modal-contenedor {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .fondo {
     width: 100%;
     height: 100%;
@@ -272,8 +280,7 @@ body {
 
 .texto-modal {
     font-size: 2rem;
-    font-weight: bold;
-    margin-top: 1rem;
+    font-weight: 500;
     padding: 0.5rem;
 }
 
